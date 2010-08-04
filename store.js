@@ -20,7 +20,7 @@ Store = (function() {
     for (_a = 0, _c = _b.length; _a < _c; _a++) {
       cookieFragment = _b[_a];
       while (cookieFragment.charAt(0) === ' ') {
-        cookieFragment.substring(1, cookieFragment.length);
+        cookieFragment = cookieFragment.substring(1, cookieFragment.length);
       }
       if (cookieFragment.indexOf(key) === 0) {
         return cookieFragment.substring(key.length, cookieFragment.length);

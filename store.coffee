@@ -22,7 +22,8 @@ Store: (->
   getCookie: (key) ->
     key: key + "="
     for cookieFragment in document.cookie.split(';')
-      cookieFragment.substring(1, cookieFragment.length) while cookieFragment.charAt(0) is ' '
+      while cookieFragment.charAt(0) is ' '
+        cookieFragment: cookieFragment.substring(1, cookieFragment.length) 
       return cookieFragment.substring(key.length, cookieFragment.length) if cookieFragment.indexOf(key) == 0
     return null
 
