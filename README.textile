@@ -1,1 +1,5 @@
 A simple wrapper around localStorage and cookies.
+
+To compile:
+
+`coffee -c store.coffee`
