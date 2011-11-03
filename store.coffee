@@ -58,7 +58,7 @@ Store = do ->
     getCookie = (key) ->
       key = key + "="
       for cookieFragment in document.cookie.split(';')
-        return cookieFragment.replace(/^\s+/, '').substring(key.length, cookieFragment.length) if cookieFragment.indexOf(key) == 0
+        return cookieFragment.replace(/^\s+/, '').substring(key.length + 1, cookieFragment.length) if cookieFragment.indexOf(key) == 0
       return null
 
     {
